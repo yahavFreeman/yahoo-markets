@@ -1,0 +1,40 @@
+.home {
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  .user-inputs-container {
+    width: fit-content;
+    > :first-child {
+      margin-right: 25px;
+      margin-bottom: 10px;
+    }
+    input {
+      width: 155px;
+      padding: 6px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: rgb(0 0 0 / 15%) 0px 0px 3px 3px;
+    }
+  }
+  button {
+    border-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $clr4;
+    font-size: 1.17rem;
+    font-family: circular;
+  }
+  > * {
+    margin-bottom: 10px;
+  }
+}

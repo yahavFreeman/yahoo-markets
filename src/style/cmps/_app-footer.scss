@@ -1,0 +1,26 @@
+.onHome {
+  // margin-top: 88vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.footer-container {
+  padding: 10px;
+  .icon-container {
+    align-items: center;
+    > :first-child {
+      margin: 0 20px 0 0;
+    }
+    a {
+      display: flex;
+    }
+    svg {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .coffee-rights {
+    align-items: center;
+  }
+}

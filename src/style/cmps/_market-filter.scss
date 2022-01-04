@@ -1,0 +1,46 @@
+.main-filter {
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+  flex-direction: column;
+  align-items: center;
+  .mobile-container {
+    gap: 10px;
+    flex-direction: row;
+  }
+  input {
+    height: 35px;
+    width: 120px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: rgb(0 0 0 / 15%) 0px 0px 3px 3px;
+    &:hover {
+      box-shadow: rgb(0 0 0 / 25%) 0px 0px 6px 6px;
+      // color: red;
+    }
+  }
+  p {
+    align-self: center;
+  }
+
+  @include for-narrow-layout {
+    flex-direction: row;
+    gap: 10px;
+    input {
+      width: 103px;
+    }
+    .mobile-container {
+      gap: 10px;
+    }
+  }
+  @include for-normal-layout {
+    .mobile-container {
+      gap: 30px;
+    }
+    gap: 30px;
+    input {
+      height: 40px;
+      width: 140px;
+    }
+  }
+}
