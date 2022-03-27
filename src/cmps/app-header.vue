@@ -1,7 +1,7 @@
 <template>
   <div class="main-layout">
     <div class="app-header flex between">
-      <h3 class="logo" @click="goHome">Markets Assignment</h3>
+      <h3 class="logo" @click="goHome">Yahoo Markets</h3>
       <div class="side-bar flex">
         <p v-if="user" @click="logout">Log-out</p>
       </div>

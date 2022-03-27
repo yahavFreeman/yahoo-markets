@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link> -->
     </div>
     <app-header />
-    <router-view />
+    <router-view/>
     <app-footer />
   </div>
 </template>

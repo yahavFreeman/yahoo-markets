@@ -11,7 +11,7 @@ async function query(filterBy = {}) {
     url: "https://yfapi.net/v6/finance/quote/marketSummary?lang=en&region=US",
     params: { modules: "defaultKeyStatistics,assetProfile" },
     headers: {
-      "x-api-key": "SzZDIdN7Jhoqul8cbEq62SYuW5lybVZ5PSXodIL6",
+      "x-api-key": "ZcnLVbnCM08Tlt5AbN0Fp7rlRX3AFBCa8hQQmKWx",
     },
   };
   const markets = JSON.parse(sessionStorage.getItem(MARKET_KEY));

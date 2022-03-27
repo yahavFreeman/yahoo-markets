@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div @click="toggleInfo">
+    <div @click.prevent="toggleInfo">
       <div v-for="preview in marketPreviews" :key="preview.title">
         <p>
           <span>{{ preview.title }}</span> {{ preview.text }}
@@ -22,11 +22,12 @@
     </div>
 
     <div
+      v-if="open"
       @click.stop="toggleInfo"
       class="modal-container"
       :class="{ open: isInfoOpen }"
     >
-      <div @click="toggleInfo" class="modal" :class="{ open: isInfoOpen }">
+      <div @click.stop="" class="modal" :class="{ open: isInfoOpen }">
         <div v-for="detail in marketDetails" :key="detail.title">
           <p>
             <span>{{ detail.title }}</span> {{ detail.text }}
@@ -46,18 +47,21 @@ export default {
     return {
       isInfoOpen: false,
       offset: "",
+      open: false,
     };
-  },
-  created() {
-    this.getOffset();
   },
   methods: {
     toggleInfo() {
-      this.isInfoOpen = !this.isInfoOpen;
+      this.open = !this.open;
+      if(this.open) this.getOffset()
+      setTimeout(() => {
+        this.isInfoOpen = !this.isInfoOpen;
+      }, 0);
     },
     getOffset() {
       //creating a string for the GMT offset
       if (this.market.gmtOffSetMilliseconds) {
+        console.log(this.market.gmtOffSetMilliseconds, "offset");
         var hours = Math.floor(
           this.market.gmtOffSetMilliseconds / 1000 / 60 / 60
         );

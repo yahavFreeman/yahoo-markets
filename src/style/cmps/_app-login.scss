@@ -20,11 +20,13 @@
       border: none;
       box-shadow: rgb(0 0 0 / 15%) 0px 0px 3px 3px;
     }
+    
   }
   button {
     border-radius: 5px;
-
+    
     &:hover {
+      box-shadow: rgb(0 0 0 / 15%) 0px 0px 3px 3px;
       cursor: pointer;
     }
   }
@@ -33,6 +35,9 @@
     color: $clr4;
     font-size: 1.17rem;
     font-family: circular;
+    &:hover{
+      color: rgb(163, 163, 163);
+  }
   }
   > * {
     margin-bottom: 10px;
